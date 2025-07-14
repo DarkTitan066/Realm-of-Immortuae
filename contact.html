@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm of Immortuae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Realm of Immortuae</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h2>Contact</h2>
+    <p class="mt-3">If you have any questions, suggestions, or feedback, feel free to reach out to us through the following channels:</p>
+    <ul class="list-group"> 
+        <li class="list-group-item">
+            <img src="pictures/discord-logo.jpg" alt="Discord Logo" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+            <a href="https://discord.gg/skdGm5656x" target="_blank" class="btn btn-primary">Join our Discord Server</a>
+            <p class="mt-2">Join our Discord community to connect with other players and staff.</p>
+        </li>
+        <li class="list-group-item">
+            <img src="pictures/curseforge-logo.jpg" alt="CurseForge Logo" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+            <a href="https://www.curseforge.com/members/darktitan066/projects" target="_blank" class="btn btn-warning">CurseForge Profile</a>
+            <p class="mt-2">You can leave a comment and we will answer any questions you have.</p>
+        </li>
+    </ul>
+    <p class="mt-4">You can also reach us by filling out the contact form below:</p>
+    <form id="contactForm" class="mt-3 bg-light p-4 rounded" autocomplete="on">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Send Message</button>
+    </form>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        // For demonstration purposes only: logs form data to the console instead of submitting.
+        console.log({ name, email, message });
+    });
+    </script>
+</div>
+<p class="text-center mt-5">Thank you for your interest in the Realm of Immortuae modpack! We appreciate your support and look forward to hearing from you.</p>
+<div class="accordion mt-5" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Frequently Asked Questions
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p><strong>Q: How do I install the modpack?</strong></p>
+                <p>A: You can download the modpack from our CurseForge page and follow the installation instructions provided there.</p>
+                <p><strong>Q: Can I play with friends?</strong></p>
+                <p>A: Yes! You can host a server or join our community server to play with others with your friends.</p>
+                <p><strong>Q: What are the system requirements for the modpack?</strong></p>
+                <p>A: The modpack requires a decent computer with at least 4GB of RAM allocated to Minecraft. We recommend at least 8GB of RAM for the best experience.</p>
+                <p><strong>Q: How can I report a bug or issue?</strong></p>
+                <p>A: You can report bugs or issues on our CurseForge page or by contacting us through Discord. Please provide as much detail as possible to help us resolve the issue quickly.</p>
+                <p><strong>Q: Are there any rules for the community server?</strong></p>
+                <p>A: Yes, we have a set of rules to ensure a friendly and enjoyable environment for all players. You can find the rules in our Discord server or on the community server itself at spawn.</p>
+                <p><strong>Q: Where is the server IP Adress?</strong></p>
+                <p>A: The server IP address is <strong>realmofimmortuae.kinetichosting.gg</strong>. You can join the server using this address in your Minecraft client with the modpack installed.</p>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
+<footer class="bg-light text-center py-3">
+    <p>&copy; <span id="copyright-year"></span> Realm of Immortuae. All rights reserved.</p>
+    <p>Created and Founded by <a href="https://github.com/DarkTitan066"><span class="text-dark">DarkTitan066</span></a></p>
+</footer>
+<button type="button" class="btn btn-secondary position-fixed" style="bottom: 20px; right: 20px; z-index: 1050;" data-bs-toggle="modal" data-bs-target="#backToTopModal" title="Scroll to top">
+    Back to Top
+</button>
+<div class="modal fade" id="backToTopModal" tabindex="-1" aria-labelledby="backToTopModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="backToTopModalLabel">Return to Top</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Would you like to scroll to the top of the page?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="scrollToTopBtn">Yes, take me up!</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var modal = bootstrap.Modal.getInstance(document.getElementById('backToTopModal'));
+    modal.hide();
+});
+</script>
+<script>
+    const startYear = 2023; // The year the Realm of Immortuae was established (used for copyright display)
+    const currentYear = new Date().getFullYear();
+    document.getElementById('copyright-year').textContent =
+        (currentYear > startYear) ? `${startYear}&#8211;${currentYear}` : `${startYear}`;
+</script>
+</body>

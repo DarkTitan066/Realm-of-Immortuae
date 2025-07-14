@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm of Immortuae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .dark-mode {
+            background-color: #181818 !important;
+            color: #f1f1f1 !important;
+        }
+        .dark-mode .navbar,
+        .dark-mode .bg-light,
+        .dark-mode footer {
+            background-color: #23272b !important;
+            color: #f1f1f1 !important;
+        }
+        .dark-mode .card.bg-dark {
+            background-color: #343a40 !important;
+            color: #f1f1f1 !important;
+        }
+        .dark-mode .btn-secondary,
+        .dark-mode .btn-danger,
+        .dark-mode .btn-primary,
+        .dark-mode .btn-success {
+            background-color: #444 !important;
+            color: #f1f1f1 !important;
+            border-color: #666 !important;
+        }
+        .dark-mode a {
+            color: #be0000 !important;
+        }
+        .dark-mode .modal-content.bg-light {
+            background-color: #23272b !important;
+            color: #f1f1f1 !important;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Realm of Immortuae</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="darkModeToggle">Dark Mode</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<img src="pictures/Server background.jpg" class="img-fluid" alt="Realm of Immortuae" style="width: 100%; height: auto;">
+<div class="container mt-5 bg-light" style="text-align: center;">
+    <h1>Welcome to the Realm of Immortuae</h1>
+    <p>This is a medieval modpack based in a dark but magical world where you can build powerful castles and kingdoms, or become a powerful rogue knight searching for a worthy opponent. This world is full of rival factions and ancient magic ready to be explored.</p>
+    <button id="modpackbutton" class="btn btn-danger" onclick="location.href='https://www.curseforge.com/minecraft/modpacks/realm-of-immortuae'">
+        Download Modpack
+    </button>
+</div>
+<div class="container mt-5">
+    <h2>About the Modpack</h2>
+    <p>This modpack is designed to enhance your Minecraft experience with a medieval theme, featuring various mods that add new gameplay elements, structures, and challenges. Whether you want to build grand castles, engage in epic battles, or explore mystical realms, this modpack has something for everyone.</p>
+    <p>Join our community on Discord to connect with other players, share your creations, and get support from the staff.</p>
+    <p>This server is a partner of <a href="https://billing.kinetichosting.net/aff.php?aff=745" target="_blank">Kinetic Hosting</a>. If you would like to host your own server with friends, Kinetic Hosting is the best server hosting service that will give you what you pay for. They also support other games such as Palworld, Valheim, SCUM, and so much more. You can use our code to get 25% off your first month of Minecraft server hosting with the code: <strong>REALMOFIMMORTUAE</strong></p>
+    <div class="text-center mt-4">
+        <a href="https://discord.gg/skdGm5656x" target="_blank" class="btn btn-primary">Join our Discord Server</a>
+    </div>
+</div>
+<div class="row mt-5 mb-5 text-center bg-light">
+    <div class="col-md-6 mt-4">
+        <h2>Latest News</h2>
+        <p>Stay updated with the latest news and updates about the Realm of Immortuae modpack. We regularly post announcements about new features, bug fixes, and community events.</p>
+    </div>
+    <div class="col-md-6 mt-4">
+        <h2>Community Highlights</h2>
+        <p>Check out some of the amazing builds and creations made by our community members. From stunning castles to intricate create contraptions, the creativity is endless!</p>
+    </div>
+    <div class="col-md-12 mt-4">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card bg-dark text-white h-100">
+                    <img src="pictures/dock.png" class="card-img-top" alt="Medieval dock build in Minecraft" />
+                    <div class="card-body">
+                        <h5 class="card-title">Epic Dock</h5>
+                        <p class="card-text">A large wooden dock with a medieval-style crane, ships, and stone walls, built by player to showcase the industrious spirit of the their town.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-dark text-white h-100">
+                    <img src="pictures/reclaimation of the tomb.png" class="card-img-top" alt="Player in dark medieval armor atop fortress stairs facing undead enemies." />
+                    <div class="card-body">
+                        <h5 class="card-title">Catacomb Reclamation</h5>
+                        <p class="card-text">A player who masters necromancy in dark medieval armor stands atop tomb stairs, facing a horde of undead enemies with his own undead fighting in his stead.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<button type="button" class="btn btn-secondary position-fixed" style="bottom: 20px; right: 20px; z-index: 1050;" data-bs-toggle="modal" data-bs-target="#backToTopModal">
+    Back to Top
+</button>
+<div class="modal fade" id="backToTopModal" tabindex="-1" aria-labelledby="backToTopModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="backToTopModalLabel">Return to Top</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Would you like to scroll to the top of the page?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="scrollToTopBtn">Yes, take me up!</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var modal = bootstrap.Modal.getInstance(document.getElementById('backToTopModal'));
+    modal.hide();
+});
+</script>
+<script>
+// Dark Mode Toggle
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    this.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+    localStorage.setItem('darkMode', isDarkMode);
+});
+// On page load, apply saved preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+        darkModeToggle.textContent = 'Light Mode';
+    }
+} else {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+        darkModeToggle.textContent = 'Dark Mode';
+    }
+}
+</script>
+</div>
+<footer class="bg-light text-center py-3">
+    <p>&copy; <span id="copyright-year"></span> Realm of Immortuae. All rights reserved.</p>
+    <p>Created and Founded by <a href="https://github.com/DarkTitan066"><span class="text-dark-red">DarkTitan066</span></a></p>
+</footer>
+<script>
+    const startYear = 2023; // The year the Realm of Immortuae was established (used for copyright display)
+    const currentYear = new Date().getFullYear();
+    document.getElementById('copyright-year').textContent =
+        (currentYear > startYear) ? `${startYear}&#8211;${currentYear}` : `${startYear}`;
+</script>
+</body>
+
