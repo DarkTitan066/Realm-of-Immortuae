@@ -47,9 +47,11 @@
     <p>&copy; <span id="copyright-year"></span> Realm of Immortuae. All rights reserved.</p>
     <p>Created and Founded by <a href="https://github.com/DarkTitan066"><span class="text-dark">DarkTitan066</span></a></p>
 </footer>
+<div>
 <button type="button" class="btn btn-secondary position-fixed" style="bottom: 20px; right: 20px; z-index: 1050;" data-bs-toggle="modal" data-bs-target="#backToTopModal">
     Back to Top
 </button>
+</div>
 <div class="modal fade" id="backToTopModal" tabindex="-1" aria-labelledby="backToTopModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content bg-light">
@@ -67,6 +69,13 @@
     </div>
   </div>
 </div>
+<script>
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var modal = bootstrap.Modal.getInstance(document.getElementById('backToTopModal'));
+    modal.hide();
+});
+</script>
 <script>
 document.getElementById('scrollToTopBtn').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
