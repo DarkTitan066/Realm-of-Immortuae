@@ -145,13 +145,6 @@ document.getElementById('scrollToTopBtn').addEventListener('click', function() {
 });
 </script>
 <script>
-document.getElementById('scrollToTopBtn').addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    var modal = bootstrap.Modal.getInstance(document.getElementById('backToTopModal'));
-    modal.hide();
-});
-</script>
-<script>
     const startYear = 2023; // The year the Realm of Immortuae was established (used for copyright display)
     const currentYear = new Date().getFullYear();
     document.getElementById('copyright-year').textContent =
